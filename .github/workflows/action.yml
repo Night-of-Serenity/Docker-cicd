@@ -47,7 +47,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            docker pull pavitpim40/react-ci:latest
+            docker pull nightofserenity/react-cicd:latest
             docker stop react-ci
             docker rm react-ci
             docker run -d --name react-ci -p 80:80 pavitpim40/react-ci:latest
