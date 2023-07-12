@@ -50,4 +50,4 @@ jobs:
             docker pull nightofserenity/react-cicd:latest
             docker stop react-ci
             docker rm react-ci
-            docker run -d --name react-ci -p 80:80 pavitpim40/react-ci:latest
+            docker run -d --name react-ci -p 80:80 nightofserenity/react-cicd:latest
