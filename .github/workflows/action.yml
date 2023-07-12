@@ -40,14 +40,14 @@ jobs:
           tags: nightofserenity/react-cicd:latest
 
       - name: Deploy to Cloud
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: ${{ secrets.SSH_PORT }}
-        script: |
-          docker pull pavitpim40/react-ci:latest
-          docker stop react-ci
-          docker rm react-ci
-          docker run -d --name react-ci -p 80:80 pavitpim40/react-ci:latest
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            docker pull pavitpim40/react-ci:latest
+            docker stop react-ci
+            docker rm react-ci
+            docker run -d --name react-ci -p 80:80 pavitpim40/react-ci:latest
