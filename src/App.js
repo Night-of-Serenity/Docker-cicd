@@ -1,7 +1,20 @@
 import logo from "./logo.svg";
 import "./App.css";
+// import axios from "axios";
+// import { useState } from "react";
 
 function App() {
+  // const [data, setData] = useState(null);
+
+  // async function fetchData() {
+  //   try {
+  //     const response = await axios.get("http://103.74.254.237:8000");
+  //     setData(response.data);
+  //   } catch (error) {
+  //     console.log(error);
+  //     setData(null);
+  //   }
+  // }
   return (
     <div className="App">
       <header className="App-header">
@@ -15,8 +28,11 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React with Docker and Volume3!!!
+          Learn DevOps with Night
+          {process.env.MAGIC_NAME}
         </a>
+        {/* <button onClick={fetchData}>fetch</button>
+        {data ? <p>{data}</p> : null} */}
       </header>
     </div>
   );
